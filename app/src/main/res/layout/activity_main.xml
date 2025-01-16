@@ -14,24 +14,54 @@
         android:layout_weight="1">
 
         <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
             android:id="@+id/team1"
-            android:text="Team 1"></TextView>
-
-        <ImageButton
-            android:id="@+id/imagebutton1"
-            android:src="">
-
-        </ImageButton>
-
-        <TextView
-            android:id="@+id/textview1"
-            android:text="0">
+            android:text="@string/team_1"
+            android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+            style="@style/TeamText">
 
         </TextView>
 
         <ImageButton
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:id="@+id/imagebutton1"
+            android:src="@drawable/ic_minus"
+            android:background="@drawable/button_background"
+            style="@style/MinusButtons"
+            >
+
+        </ImageButton>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:id="@+id/score1"
+            android:text="@string/value"
+            android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+            style="@style/ScoreText">
+
+        </TextView>
+
+        <ImageButton
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
             android:id="@+id/imagebutton2"
-            android:src="">
+            android:src="@drawable/ic_plus"
+            android:background="@drawable/button_background"
+            style="@style/PlusButtons"
+            >
 
         </ImageButton>
     </RelativeLayout>
@@ -42,24 +72,45 @@
         android:layout_weight="1">
 
         <TextView
-            android:id="@+id/team1"
-            android:text="Team 2"></TextView>
-
-        <ImageButton
-            android:id="@+id/imagebutton1"
-            android:src="">
-
-        </ImageButton>
-
-        <TextView
-            android:id="@+id/textview1"
-            android:text="0">
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/team2"
+            android:text="@string/team_2"
+            android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+            style="@style/TeamText">
 
         </TextView>
 
         <ImageButton
-            android:id="@+id/imagebutton2"
-            android:src=""></ImageButton>
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:id="@+id/imagebutton3"
+            android:src="@drawable/ic_minus"
+            android:background="@drawable/button_background"
+            style="@style/MinusButtons"
+            >
+
+        </ImageButton>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/score2"
+            android:text="@string/value2"
+            android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+            style="@style/ScoreText">
+
+        </TextView>
+
+        <ImageButton
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:id="@+id/imagebutton4"
+            android:src="@drawable/ic_plus"
+            android:background="@drawable/button_background"
+            style="@style/PlusButtons">
+
+        </ImageButton>
     </RelativeLayout>
 
 </LinearLayout>
