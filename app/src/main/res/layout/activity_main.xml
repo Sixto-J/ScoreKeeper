@@ -66,6 +66,7 @@
         </ImageButton>
     </RelativeLayout>
 
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -74,6 +75,8 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
             android:id="@+id/team2"
             android:text="@string/team_2"
             android:textAppearance="@style/TextAppearance.AppCompat.Headline"
@@ -84,6 +87,9 @@
         <ImageButton
             android:layout_width="70dp"
             android:layout_height="70dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
             android:id="@+id/imagebutton3"
             android:src="@drawable/ic_minus"
             android:background="@drawable/button_background"
@@ -95,6 +101,8 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
             android:id="@+id/score2"
             android:text="@string/value2"
             android:textAppearance="@style/TextAppearance.AppCompat.Headline"
@@ -105,6 +113,9 @@
         <ImageButton
             android:layout_width="70dp"
             android:layout_height="70dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
             android:id="@+id/imagebutton4"
             android:src="@drawable/ic_plus"
             android:background="@drawable/button_background"

@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
@@ -49,8 +50,32 @@ public class MainActivity extends AppCompatActivity {
         }
 
 
+        ImageButton firstbtn  = findViewById(R.id.imagebutton1);
+        ImageButton secondbtn = findViewById(R.id.imagebutton2);
+        ImageButton thirdbtn = findViewById(R.id.imagebutton3);
+        ImageButton fourthbtn = findViewById(R.id.imagebutton4);
+
+        firstbtn.setOnClickListener(genericClickListener);
+        secondbtn.setOnClickListener(genericClickListener);
+        thirdbtn.setOnClickListener(genericClickListener);
+        fourthbtn.setOnClickListener(genericClickListener);
+
+
 
     }
+
+    private View.OnClickListener genericClickListener= new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+
+            if (view.getId() == R.id.imagebutton1 || view.getId() == R.id.imagebutton3) {
+                decreaseScore(view);
+            } else if(view.getId() == R.id.imagebutton2 || view.getId() == R.id.imagebutton4) {
+                increaseScore(view);
+            }
+        }
+    };
+
 
     /**
      * Creates the night mode menu option
@@ -106,19 +131,18 @@ public class MainActivity extends AppCompatActivity {
     public void decreaseScore(View view) {
         //Get the ID of the button that was clicked
         int viewID = view.getId();
-        switch (viewID){
             //If it was on Team 1
-            case R.id.decreaseTeam1:
+            if(viewID == R.id.imagebutton1){
                 //Decrement the score and update the TextView
                 mScore1--;
                 mScoreText1.setText(String.valueOf(mScore1));
-                break;
-            //If it was Team 2
-            case R.id.decreaseTeam2:
-                //Decrement the score and update the TextView
+            }else if(viewID == R.id.imagebutton3){
                 mScore2--;
                 mScoreText2.setText(String.valueOf(mScore2));
-        }
+
+           }
+
+
     }
 
     /**
@@ -128,19 +152,17 @@ public class MainActivity extends AppCompatActivity {
     public void increaseScore(View view) {
         //Get the ID of the button that was clicked
         int viewID = view.getId();
-        switch (viewID){
-            //If it was on Team 1
-            case R.id.increaseTeam1:
-                //Increment the score and update the TextView
+
+            if(viewID == R.id.imagebutton2){
+                //Decrement the score and update the TextView
                 mScore1++;
                 mScoreText1.setText(String.valueOf(mScore1));
-                break;
-            //If it was Team 2
-            case R.id.increaseTeam2:
+            }else if(viewID == R.id.imagebutton4){
                 //Increment the score and update the TextView
                 mScore2++;
                 mScoreText2.setText(String.valueOf(mScore2));
         }
+
     }
 
 
